@@ -41,24 +41,6 @@ int omnikreadconfig(void) {
 		}
 //		printf("nospaces(?) %s\n", line); //for debugging
 
-		if (strstr(line, "omnikurl") != NULL) {
-			if (strlen(line) < 68) {
-				strcpy(stats.url, &line[8]);
-				if (stats.verbose==2) printf("URL: %s\n", stats.url);
-			}
-		}
-		if (strstr(line, "omnikapi") != NULL) {
-			if (strlen(line) < 68) {
-				strcpy(stats.key, &line[8]);
-				if (stats.verbose==2) printf("KEY: %s\n", stats.key);
-			}
-		}
-		if (strstr(line, "systemid") != NULL) {
-			if (strlen(line) < 18) {
-				strcpy(stats.ID, &line[8]);
-				if (stats.verbose==2) printf("ID: %s\n", stats.ID);
-			}
-		}
 		if (strstr(line, "ipnumber") != NULL) {
 			if (strlen(line) < 25) {
 				strcpy(stats.IPnumber, &line[8]);

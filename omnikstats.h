@@ -34,7 +34,6 @@ extern int omniksearch(void);
 extern int omnikgetstats(char *server_reply);
 extern void omnikcsv(void);
 extern char *getdatetime(char *now, int datetime);
-extern int omnikpvoutput(void);
 extern void omnikfillstruct(char *server_reply);
 extern int omnikreadconfig(void);
 

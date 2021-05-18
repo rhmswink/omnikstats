@@ -78,16 +78,12 @@ int main(int argc, char *argv[])
 		printf("Error in TCP: %d\n", i);
 		exit(1);
 	}
-
+	printf("Filling struct\n");
 	// Fill the stats structure print to stdout if 2nd argument=1
 	omnikfillstruct(server_reply);
 
 	// append it to a CSV data file
 	if (stats.logcsv) omnikcsv();
-
-	// send it to pvoutput.org
-	omnikpvoutput();
-
 
 	return 0;
 }
